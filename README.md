@@ -4,6 +4,7 @@ Bash scripts for manipulating google keep notes exports
 ## Usage
 ### Converting all notes to `txt` files
 Export your google keep notes from [google takeout](https://takeout.google.com/)
+
 Copy / Replace `google-keep-converter/Data/Keep` with your exported `Keep` folder
 
 Then in Bash:
