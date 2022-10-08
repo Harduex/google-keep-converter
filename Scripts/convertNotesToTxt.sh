@@ -12,7 +12,6 @@ PROCESSED_NOTES=1
 for NOTE in $OUPTUT_NOTES; do
   echo "Note: [$PROCESSED_NOTES/$NOTES_COUNT]"
   echo "Processing $NOTE file..."
-  # FILENAME="$(basename "$INPUT_FILE_PATH" .json)"
   FILENAME="$(basename "$NOTE" .json)"
   FILENAME=${FILENAME// /_}
   CONVERTED_NOTE="$CONVERTED_NOTES_DIR/$FILENAME.txt"
