@@ -26,12 +26,15 @@ From converted notes
 $ ./getRandomNoteTxt.sh
 ```
 
+Notes that you get are moved to `google-keep-converter/Data/Converted/Seen` directory.
+
+
 From original Keep folder
 ```
 $ ./getRandomNoteJson.sh
 ```
 
-Notes that you get are moved to `google-keep-converter/Data/Converted/Seen` directory.
+Notes that you get are moved to `google-keep-converter/Data/Keep/Seen` directory.
 
 ### Split converted notes to multiple folders
 ```
