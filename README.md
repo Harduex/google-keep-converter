@@ -10,6 +10,8 @@ Export your google keep notes from [google takeout](https://takeout.google.com/)
 
 Copy / Replace `google-keep-converter/Data/Keep` with your exported `Keep` folder
 
+or set `DATA_DIR` in `.env` file to the absolute path of your `Takeout` folder that contains `Keep` folder with your notes inside.
+
 Then in Bash:
 ```
 $ cd google-keep-converter/Scripts

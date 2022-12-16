@@ -29,17 +29,17 @@ for NOTE in $OUPTUT_NOTES; do
     echo "file $CONVERTED_NOTE exists. Skipping."
   else
     echo "Generating $CONVERTED_NOTE file..."
-    if [$INCLUDE_DATE]; then
+    if [ $INCLUDE_DATE = true ]; then
       DATE_CREATED_TIMESTAMP=$(cat "$NOTE" | ./lib/jq -r '.createdTimestampUsec')
       DATE_CREATED=$(date +'%d-%m-%Y %H:%M:%S' -d @"$(($DATE_CREATED_TIMESTAMP / 1000000))")
       printf "$DATE_CREATED\n\n" >>$CONVERTED_NOTE
     fi
     cat "$NOTE" | ./lib/jq -r '.title' | awk NF >>$CONVERTED_NOTE
     cat "$NOTE" | ./lib/jq -r '.textContent' | awk NF >>$CONVERTED_NOTE
+  fi
+    clear
     let PROCESSED_NOTES++
     echo "Note: [$PROCESSED_NOTES/$NOTES_COUNT]"
-    # clear
-  fi
 done
 
 echo "Done."
